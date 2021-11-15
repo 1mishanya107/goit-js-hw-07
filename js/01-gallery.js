@@ -28,17 +28,16 @@ function createGalleryCards(cards) {
 }
 
 
-document.querySelector('.gallery').onclick = (e) => {
+galleryContainer.onclick = (e) => {
+
     e.preventDefault();
-    // console.log(e.currentTarget)
-
-
+    
     if (e.target.nodeName !== "IMG") {
         return
     }
     else {
-	basicLightbox.create(`
+        basicLightbox.create(`
 		<img width=auto src="${e.target.dataset.source}">
-	`).show()
+	`).show();
 }
 }
